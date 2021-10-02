@@ -19,17 +19,21 @@ type
   TAndroidModule1 = class(jForm)
     jBitmap1: jBitmap;
     jButton1: jButton;
+    btWalk: jButton;
+    btRun: jButton;
     jDrawingView1: jDrawingView;
     jLinearLayout1: jLinearLayout;
     jTimer1: jTimer;
     procedure AndroidModule1JNIPrompt(Sender: TObject);
+    procedure btRunClick(Sender: TObject);
+    procedure btWalkClick(Sender: TObject);
     procedure jButton1Click(Sender: TObject);
     procedure jDrawingView1Draw(Sender: TObject; countXY: integer;
       X: array of single; Y: array of single; flingGesture: TFlingGesture;
       pinchZoomScaleState: TPinchZoomScaleState; zoomScale: single);
     procedure jTimer1Timer(Sender: TObject);
   private
-    f,
+    sf,
     px,
     sx,
     sy : integer;
@@ -52,9 +56,19 @@ begin
   jBitmap1.LoadFromAssets('lemur_walk.png');
   sx := 282;
   sy := 286;
-  f := 3;
-  jDrawingView1.Width:=sx*f;
-  jDrawingView1.Height:=sy*f;
+  sf := 2;
+  jDrawingView1.Width:=sx*sf;
+  jDrawingView1.Height:=sy*sf;
+end;
+
+procedure TAndroidModule1.btRunClick(Sender: TObject);
+begin
+  jTimer1.Interval:=20;
+end;
+
+procedure TAndroidModule1.btWalkClick(Sender: TObject);
+begin
+  jTimer1.Interval:=150;
 end;
 
 procedure TAndroidModule1.jButton1Click(Sender: TObject);
@@ -73,8 +87,7 @@ procedure TAndroidModule1.jDrawingView1Draw(Sender: TObject; countXY: integer;
   X: array of single; Y: array of single; flingGesture: TFlingGesture;
   pinchZoomScaleState: TPinchZoomScaleState; zoomScale: single);
 begin
-  jDrawingView1.DrawBitmap(jBitmap1.GetImage(),px,0,px+sx,sy,0,0,sx*f,sy*f);
-  //jDrawingView1.DrawText(px.ToString,0,0);
+  jDrawingView1.DrawBitmap(jBitmap1.GetImage(),px,0,px+sx,sy,0,0,sx*sf,sy*sf);
 end;
 
 procedure TAndroidModule1.jTimer1Timer(Sender: TObject);

@@ -19,10 +19,14 @@ type
   TAndroidModule1 = class(jForm)
     jBitmap1: jBitmap;
     jButton1: jButton;
+    btWalk: jButton;
+    btRun: jButton;
     jDrawingView1: jDrawingView;
     jLinearLayout1: jLinearLayout;
     jTimer1: jTimer;
     procedure AndroidModule1JNIPrompt(Sender: TObject);
+    procedure btRunClick(Sender: TObject);
+    procedure btWalkClick(Sender: TObject);
     procedure jButton1Click(Sender: TObject);
     procedure jDrawingView1Draw(Sender: TObject; countXY: integer;
       X: array of single; Y: array of single; flingGesture: TFlingGesture;
@@ -57,6 +61,16 @@ begin
   jDrawingView1.Height:=sy*sf;
 end;
 
+procedure TAndroidModule1.btRunClick(Sender: TObject);
+begin
+  jTimer1.Interval:=20;
+end;
+
+procedure TAndroidModule1.btWalkClick(Sender: TObject);
+begin
+  jTimer1.Interval:=150;
+end;
+
 procedure TAndroidModule1.jButton1Click(Sender: TObject);
 begin
   if jButton1.Tag=0 then begin
@@ -67,6 +81,8 @@ begin
     jButton1.Text:='Start';
   end;
   jTimer1.Enabled:=not jTimer1.Enabled;
+  btWalk.Enabled:=jTimer1.Enabled;
+  btRun.Enabled:=jTimer1.Enabled;
 end;
 
 procedure TAndroidModule1.jDrawingView1Draw(Sender: TObject; countXY: integer;
