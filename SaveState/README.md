@@ -8,11 +8,45 @@ Na maioria das vezes precisamos que o nosso programa salve alguma preferência o
 
 Utiliza-se **Set<tipo>Data(chave,valor)** para gravar um valor e **Get<tipo>Data(chave,default)** para ler um valor. 
 
+Para limpar todos os dados, basta chamar o método **Clear**.
+
 ## Programa
 
-##### Tela
+As duas principais partes do programa é a rotina que inicializa a lista (ajustando o estado de cada item)
 
-Foi colocado um componenet **jListView**, ocupando toda a tela **LayoutParamHeight** e **LayoutParamWidth** setados para **lpMatchParent**, **ItemLayout** com **layWidgetTextImage** para colocarmos uma widget no item e **WidgetItem** para **wgCheckBox**.
+Note que iniciamos a lista com 50 itens. Mas poderíamos ter algo como `numItens:=jPreferences1.GetIntData('numItens',50);`. Se não tiver nada salvo assume 50, caso contrário o número de itens na lista.
+
+```objectpascal
+procedure TAndroidModule1.AndroidModule1Show(Sender: TObject);
+var
+  i: Integer;
+  s: String;
+begin
+  for i:=0 to 50 do begin
+      s:='Item '+i.ToString;
+      jListView1.Add(s);
+      jListView1.SetWidgetCheck(jPreferences1.GetBoolData(s,false),i);
+  end;
+end;   
+```
+
+e a rotina que ajusta o novo valor do item
+
+```objectpascal
+procedure TAndroidModule1.jListView1ClickWidgetItem(Sender: TObject;
+  itemIndex: integer; checked: boolean);
+begin
+   jPreferences1.SetBoolData(jListView1.Items[itemIndex],checked);
+end;  
+```
+
+O resultado final fica assim:
+
+
+
+![](midia/screenshot.png)
+
+
 
 
 
