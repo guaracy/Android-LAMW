@@ -44,7 +44,7 @@ O resultado final fica assim:
 
 
 
-![](midia/screenshot.png)
+![](github/screenshot.png)
 
 
 
