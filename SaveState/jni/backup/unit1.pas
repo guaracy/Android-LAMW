@@ -55,9 +55,9 @@ procedure TAndroidModule1.jListView1ClickItem(Sender: TObject;
   itemIndex: integer; itemCaption: string);
 begin
   if jListView1.IsItemChecked(itemIndex) then
-    ShowMessage('CHECKED')
+    ShowMessage(itemCaption+' CHECKED')
   else
-    ShowMessage('UNCHECKED');
+    ShowMessage(itemCaption+' UNCHECKED');
 end;
 
 procedure TAndroidModule1.jListView1ClickWidgetItem(Sender: TObject;

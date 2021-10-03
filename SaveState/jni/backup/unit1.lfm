@@ -34,11 +34,11 @@ object AndroidModule1: TAndroidModule1
     BackgroundColor = colbrDefault
     FontColor = colbrDefault
     FontSize = 0
-    WidgetItem = wgCheckBox
+    WidgetItem = wgSwitch
     Delimiter = '|'
     TextColorInfo = colbrDefault
     TextDecorated = txtNormal
-    ItemLayout = layWidgetTextImage
+    ItemLayout = layImageTextWidget
     TextSizeDecorated = sdNone
     TextAlign = alLeft
     TextPosition = posCenter
