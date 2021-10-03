@@ -2,4 +2,4 @@
 bin/
 build/
 obj/
-libs/**/*.so
+libs/
