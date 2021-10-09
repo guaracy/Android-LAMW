@@ -22,7 +22,7 @@
           <Item0 Name="jControls" Value="jForm;jListView;jPreferences"/>
         </CustomData>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="50"/>
+        <TopLine Value="49"/>
         <CursorPos X="21" Y="62"/>
         <UsageCount Value="22"/>
         <Loaded Value="True"/>

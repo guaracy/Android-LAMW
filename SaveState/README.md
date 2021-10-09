@@ -42,14 +42,4 @@ end;
 
 O resultado final fica assim:
 
-
-
 ![](github/screenshot.png)
-
-
-
-
-
-
-
-
