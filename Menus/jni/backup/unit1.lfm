@@ -1,0 +1,112 @@
+object AndroidModule1: TAndroidModule1
+  MarginLeft = 0
+  MarginTop = 0
+  MarginRight = 0
+  MarginBottom = 0
+  Enabled = True
+  Left = 371
+  Top = 29
+  Width = 320
+  Height = 400
+  Text = 'Teste de menus'
+  ActivityMode = actMain
+  BackgroundColor = colbrDefault
+  ActionBarTitle = abtDefault
+  AnimationDurationIn = 100
+  AnimationDurationOut = 100
+  AnimationMode = animNone
+  OnShow = AndroidModule1Show
+  OnCreateOptionMenu = AndroidModule1CreateOptionMenu
+  OnClickOptionMenuItem = AndroidModule1ClickOptionMenuItem
+  OnActivityCreate = AndroidModule1ActivityCreate
+  object jPanel1: jPanel
+    MarginLeft = 0
+    MarginTop = 0
+    MarginRight = 0
+    MarginBottom = 0
+    Enabled = True
+    Left = 0
+    Top = 0
+    Width = 320
+    Height = 400
+    Visible = True
+    PosRelativeToAnchor = []
+    PosRelativeToParent = []
+    LayoutParamWidth = lpMatchParent
+    LayoutParamHeight = lpMatchParent
+    BackgroundColor = colbrDefault
+    MinPinchZoomFactor = 0.25
+    MaxPinchZoomFactor = 4
+    AnimationDurationIn = 100
+    AnimationDurationOut = 100
+    AnimationMode = animFade
+    object jPanel2: jPanel
+      MarginLeft = 0
+      MarginTop = 0
+      MarginRight = 0
+      MarginBottom = 0
+      Enabled = True
+      Left = 0
+      Top = 0
+      Width = 320
+      Height = 400
+      Visible = True
+      PosRelativeToAnchor = []
+      PosRelativeToParent = []
+      LayoutParamWidth = lpMatchParent
+      LayoutParamHeight = lpMatchParent
+      BackgroundColor = colbrMidnightBlue
+      MinPinchZoomFactor = 0.25
+      MaxPinchZoomFactor = 4
+      AnimationDurationIn = 100
+      AnimationDurationOut = 100
+      AnimationMode = animRightToLeft
+      object jTextView1: jTextView
+        MarginLeft = 5
+        MarginTop = 5
+        MarginRight = 5
+        MarginBottom = 5
+        Enabled = True
+        Left = 5
+        Top = 186
+        Width = 310
+        Height = 27
+        Visible = True
+        PosRelativeToAnchor = []
+        PosRelativeToParent = [rpCenterInParent]
+        LayoutParamWidth = lpMatchParent
+        LayoutParamHeight = lpWrapContent
+        Text = 'Escolha uma opção do menu.'
+        Alignment = taCenter
+        BackgroundColor = colbrDefault
+        FontColor = colbrDefault
+        FontSize = 20
+        TextTypeFace = tfNormal
+        FontSizeUnit = unitDefault
+        GravityInParent = lgNone
+      end
+    end
+  end
+  object jMenu1: jMenu
+    Options.Strings = (
+      'Lazarus'
+      'Red'
+      'Beads'
+      'Elm'
+      'Icon'
+      'Nim'
+      'J'
+    )
+    IconIdentifiers.Strings = (
+      'ic_lazarus'
+      'ic_red'
+      'ic_beads'
+      'ic_elm'
+      'ic_icon'
+      'ic_nim'
+      'ic_j'
+    )
+    Left = 200
+    Top = 264
+  end
+end

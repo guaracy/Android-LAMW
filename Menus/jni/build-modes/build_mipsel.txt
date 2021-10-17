@@ -1,0 +1,3 @@
+<Libraries Value="/home/guaracy/LAMW/ndk/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/lib/gcc/mipsel-linux-android/4.9.x"/>
+<TargetCPU Value="mipsel"/>
+<CustomOptions Value="-Xd -XPmipsel-linux-android- -FD/home/guaracy/LAMW/ndk/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/bin"/>
