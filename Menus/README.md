@@ -1,6 +1,14 @@
+
+
+
+
+
+
+
+
+
+
 Menus
-
-
 
 Para colocar um menu na sua janela, use o componenete
 
@@ -21,7 +29,6 @@ procedure AddItem(_menu: jObjMenu;
                   _iconIdentifier: string; 
                   _itemType: TMenuItemType; 
                   _showAsAction: TMenuItemShowAsAction);
-
 ```
 
 - jObjMenu é fornecido pelo procedimento.
@@ -142,9 +149,20 @@ begin
     16 : AndroidModule2.jWebView1.Navigate('https://www.jsoftware.com/');
   end;
 end;
-
 ```
 
 Se o itemID for 101, mostra a página principal. Se for 102, mostra a página do sobre. Se for entre 10 e 16, mostra a página com o navegador e carrega a página correspondente.
 
-E era isto.
+Existem submenus e menus de contexto que não foram abordados. Pessoalmente acho que são melhores para aplicações dektop. Você pode utilizar apenas os pontos e deixar a actionbar limpa.
+
+![](github/LAMW-MenuDots.gif)
+
+Destacar duas opções para agilizar a escolha do usuário colocando os ícones
+
+
+
+![](github/LAMW-Menu.gif)
+
+Ou utilizar a descrição dos menus sem os ícones.
+
+![](github/LAMW-MenuText.gif)
