@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
-    <Version Value="12"/>
+    <Version Value="11"/>
     <General>
       <Flags>
         <MainUnitHasCreateFormStatements Value="False"/>
         <MainUnitHasTitleStatement Value="False"/>
-        <MainUnitHasScaledStatement Value="False"/>
         <LRSInOutputDirectory Value="False"/>
-        <CompatibilityMode Value="True"/>
       </Flags>
       <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
       <Title Value="controls"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
@@ -21,9 +20,9 @@
       <Item2 Name="LamwVersion" Value="0.8.6.1"/>
       <Item3 Name="MinSdk" Value="14"/>
       <Item4 Name="NdkApi" Value="android-22"/>
-      <Item5 Name="NdkPath" Value="/home/guaracy/LAMW/ndk/"/>
-      <Item6 Name="Package" Value="org.lamw.lamwcalculator"/>
-      <Item7 Name="SdkPath" Value="/home/guaracy/LAMW/sdk/"/>
+      <Item5 Name="NdkPath" Value="/home/guaracy/android/sdk/ndk-bundle/"/>
+      <Item6 Name="Package" Value="org.lamw.polias"/>
+      <Item7 Name="SdkPath" Value="/home/guaracy/Android/Sdk/"/>
       <Item8 Name="StartModule" Value="AndroidModule1"/>
       <Item9 Name="Support" Value="FALSE"/>
       <Item10 Name="Theme" Value="DeviceDefault"/>
@@ -37,6 +36,7 @@
     </PublishOptions>
     <RunParams>
       <FormatVersion Value="2"/>
+      <Modes Count="0"/>
     </RunParams>
     <RequiredPackages Count="1">
       <Item1>
@@ -54,7 +54,7 @@
         <ComponentName Value="AndroidModule1"/>
         <HasResources Value="True"/>
         <CustomData Count="1">
-          <Item0 Name="jControls" Value="jButton;jExpression;jForm;jLinearLayout;jTextView"/>
+          <Item0 Name="jControls" Value="jButton;jDrawingView;jEditText;jForm;jLinearLayout;jTextView"/>
         </CustomData>
       </Unit1>
     </Units>
@@ -65,7 +65,7 @@
       <Filename Value="../libs/armeabi-v7a/libcontrols"/>
     </Target>
     <SearchPaths>
-      <Libraries Value="/home/guaracy/LAMW/ndk/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/22/;/home/guaracy/LAMW/ndk/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/"/>
+      <Libraries Value="/home/guaracy/android/sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/22/;/home/guaracy/android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/lib/gcc/arm-linux-androideabi/4.9.x/"/>
       <UnitOutputDirectory Value="../obj/controls"/>
     </SearchPaths>
     <Parsing>
@@ -94,7 +94,7 @@
       </Options>
     </Linking>
     <Other>
-      <CustomOptions Value="-Xd -CfVFPv3 -CpARMV7A -XParm-linux-androideabi- -FD/home/guaracy/LAMW/ndk/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin"/>
+      <CustomOptions Value="-Xd -CfVFPv3 -CpARMV7A -XParm-linux-androideabi- -FD/home/guaracy/android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin"/>
     </Other>
   </CompilerOptions>
   <Debugging>
